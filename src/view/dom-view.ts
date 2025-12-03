@@ -18,7 +18,7 @@ class ContentBuilder extends AbstractView<HTMLElement> {
     dom.setAttribute("style", "");
     if (style) {
       for (let key in style) {
-        dom.style[key] = style[key];
+        dom.style[key as any] = style[key];
       }
     }
   }

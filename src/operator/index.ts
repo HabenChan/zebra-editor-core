@@ -67,7 +67,7 @@ class Operator {
     backspace(this.editor, start, end, event);
   }
 
-  onArraw(direction: DirectionType, event: KeyboardEvent) {
+  onArrow(direction: DirectionType, event: KeyboardEvent) {
     nextTick(() => {
       document.dispatchEvent(new Event("editorChange"));
     });
@@ -132,13 +132,13 @@ class Operator {
 
     // 方向键
     if (/^arrow/i.test(event.key)) {
-      let map = {
+      let map: any = {
         ArrowUp: DirectionType.up,
         ArrowDown: DirectionType.down,
         ArrowLeft: DirectionType.left,
         ArrowRight: DirectionType.right,
       };
-      this.onArraw(map[event.key], event);
+      this.onArrow(map[event.key] as any, event);
       return;
     }
   }

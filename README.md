@@ -1,7 +1,5 @@
 # ZebraEditorCore
 
-ZebraEditorCore 是[斑码编辑器](https://zebrastudio.tech)剔除 `UI` 框架，纯粹的富文本编辑器，该项目将焦点关注于编辑器最为关键的部分！
-
 ## 使用
 
 ```

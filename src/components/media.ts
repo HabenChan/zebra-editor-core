@@ -127,7 +127,7 @@ class Media extends Block {
       video: "buildeVideo",
     };
 
-    return contentView[map[this.mediaType]](
+    return (contentView as any)[map[this.mediaType]](
       this.id,
       this.src,
       this.decorate.getStyle(),

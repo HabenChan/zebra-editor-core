@@ -69,6 +69,7 @@ abstract class StructureCollection<T extends Block> extends Collection<T> {
     blockList.forEach((each) => {
       each.parent = this;
       each.active = true;
+      this.editor?.$emit("blockCreated", each);
     });
 
     this.componentWillChange();

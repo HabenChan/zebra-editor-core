@@ -24,6 +24,8 @@ const createEditor = (
   root.appendChild(iframe);
 
   const loadIframe = () => {
+    console.log(12341234);
+    
     if (!iframe.contentWindow || !iframe.contentDocument) {
       return;
     }
@@ -229,7 +231,11 @@ const createEditor = (
     }
   };
 
-  iframe.addEventListener("load", loadIframe);
+  // iframe.addEventListener("load", loadIframe);
+  setTimeout(()=>{
+    loadIframe();
+  }, 300)
+
   return root;
 };
 
